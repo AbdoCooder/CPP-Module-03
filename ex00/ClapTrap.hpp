@@ -8,7 +8,7 @@
 class ClapTrap {
  public:
   ClapTrap();
-  ClapTrap(std::string &newName);
+  ClapTrap(const std::string &newName);
   ClapTrap(const ClapTrap &other);
   ClapTrap &operator=(const ClapTrap &other);
   ~ClapTrap();
@@ -18,9 +18,9 @@ class ClapTrap {
 
  private:
   std::string name;
-  int hitPoints;
-  int energyPoints;
-  int attackDamage;
+  unsigned int hitPoints;
+  unsigned int energyPoints;
+  unsigned int attackDamage;
 };
 
 #endif  // CLAPTRAP_HPP
