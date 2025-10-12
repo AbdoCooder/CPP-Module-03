@@ -6,9 +6,9 @@ ifeq ($(COLOR),1)
 	CFLAGS += -DUSE_COLOR
 endif
 
-NAME = ClapTrap
-SRC = $(NAME).cpp main.cpp
-HEADERS = $(NAME).hpp
+NAME = ScavTrap
+SRC = $(NAME).cpp main.cpp ClapTrap.cpp
+HEADERS = $(NAME).hpp ClapTrap.hpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

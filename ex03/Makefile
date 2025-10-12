@@ -1,14 +1,14 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 # To Enable colors: make COLOR=1
 ifeq ($(COLOR),1)
 	CFLAGS += -DUSE_COLOR
 endif
 
-NAME = ClapTrap
-SRC = $(NAME).cpp main.cpp
-HEADERS = $(NAME).hpp
+NAME = DiamondTrap
+SRC = $(NAME).cpp main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+HEADERS = $(NAME).hpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
